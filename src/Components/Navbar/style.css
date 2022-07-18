@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 425px) {
+  #root > div > nav.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation1.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionFixed.mui-fixed.css-1jrbdul-MuiPaper-root-MuiAppBar-root > div > button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  button {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .MuiButton-root {
+    display: none;
+  }
+}
