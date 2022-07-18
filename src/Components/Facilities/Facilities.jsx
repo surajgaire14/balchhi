@@ -1,0 +1,87 @@
+import React from "react";
+import {
+  BreakfastDining,
+  LocalParking,
+  WorkOutline,
+} from "@mui/icons-material";
+import { Typography } from "@mui/material";
+import "./style.css";
+
+const icons = [
+  { name: "Free Wifi", icon: <i className="ri-wifi-fill icon"></i> },
+  { name: "Breakfast", icon: <BreakfastDining className="icon" /> },
+  { name: "Parking", icon: <LocalParking className="icon" /> },
+  { name: "Working Space", icon: <WorkOutline className="icon" /> },
+  {
+    name: "24hr electricity",
+    icon: <i className="fa-solid fa-bolt-lightning icon"></i>,
+  },
+  {
+    name: "Swimmingpool",
+    icon: <i className="fa-solid fa-person-swimming icon"></i>,
+  },
+  { name: "Dinner", icon: <i className="fa-solid fa-utensils icon"></i> },
+  { name: "Others", icon: <i className="ri-wifi-fill icon"></i> },
+];
+
+const Facilities = () => {
+  return (
+    <div className="facilities__container" id="facilities__container">
+      <div className="about">
+        <Typography variant="h2" component={"h2"}>
+          Our <span className="span">Facilities</span> for you
+        </Typography>
+        <Typography>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          mollitia iusto eligendi? Pariatur, accusantium? Itaque explicabo culpa
+          quas laudantium. Iste, nobis.
+        </Typography>
+        <button>Contact Now</button>
+      </div>
+      <div className="facilities">
+        {/* <div>
+          <i className="ri-wifi-fill icon"></i>
+          <Typography>Free Wifi</Typography>
+        </div>
+        <div>
+          <BreakfastDining className="icon" />
+          <Typography>Breakfast</Typography>
+        </div>
+        <div>
+          <LocalParking className="icon" />
+          <Typography>Parking</Typography>
+        </div>
+        <div>
+          <WorkOutline className="icon" />
+          <Typography>Working Space</Typography>
+        </div>
+        <div>
+          <i className="fa-solid fa-bolt-lightning icon"></i>
+          <Typography component="p">24hr electricity</Typography>
+        </div>
+        <div>
+          <i className="fa-solid fa-person-swimming icon"></i>
+          <Typography>Swimming Pool</Typography>
+        </div>
+        <div>
+          <i className="fa-solid fa-utensils icon"></i>
+          <Typography>Dinner</Typography>
+        </div>
+        <div>
+          <i className="fa-solid fa-utensils icon"></i>
+          <Typography>Others</Typography>
+        </div> */}
+        {icons.map(({ name, icon }, i) => {
+          return (
+            <div key={i}>
+              {icon}
+              <Typography>{name}</Typography>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Facilities;

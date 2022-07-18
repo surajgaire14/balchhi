@@ -3,3 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  background: #f3f3f5;
+  overflow-x: hidden;
+  transition: all .3s ease-in-out;
+}

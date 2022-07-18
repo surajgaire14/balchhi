@@ -1,0 +1,113 @@
+.facilities__container {
+    display: flex;
+    background: #f3f3f5;
+    margin: 30px 0;
+    // padding: 70px 0;
+    background: transparent;
+    gap:20px;
+
+    @media (max-width: 768px) {
+      & {
+        padding-top: 0;
+        margin-top: 50px;
+        padding-bottom: 0;
+      }
+
+      // .container {
+      //   width: 80%;
+      //   display: flex;
+      //   align-items: flex-start;
+      //   justify-content: left;
+      // }
+    }
+
+    .about {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+
+      @media (max-width: 425px) {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 5px;
+        align-items: flex-start;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        font-weight: bold;
+        .span {
+          color: orangered;
+        }
+        @media (max-width: 768px) {
+          font-size: 2.8rem;
+        }
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+          margin: 15px 0;
+        }
+      }
+
+      button {
+        background: orangered;
+        border: none;
+        color: #fff;
+        width: auto;
+        max-width: 15vw;
+        border-radius: 10px;
+        padding: 10px 0;
+        cursor: pointer;
+        font-size: 1rem;
+
+        @media (max-width: 768px) {
+          max-width: 50vw;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .facilities {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 50%;
+
+      @media (max-width: 768px) {
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      div {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        gap: 0.7vw;
+        padding: 25px 8px;
+        border-radius: 0.2vw;
+        border: 1px solid rgb(232, 232, 232);
+
+        p {
+          font-size: 15px;
+        }
+
+        &:hover {
+          border: 1px solid orangered;
+        }
+        .icon {
+          color: orangered;
+          font-size: 30px;
+        }
+      }
+    }
+  }
