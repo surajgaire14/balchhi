@@ -1,0 +1,67 @@
+.footer__container {
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
+}
+.footer__container .footer {
+  width: 80%;
+  margin: auto;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__container .footer .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+.footer__container .footer .about .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+.footer__container .footer .about .icons a {
+  color: #fff;
+  font-size: 2rem;
+}
+.footer__container .footer .about .icons a:nth-child(1):hover {
+  color: #4267b2;
+}
+.footer__container .footer .about .icons a:nth-child(2):hover {
+  color: #c13584;
+}
+.footer__container .footer .about .icons a:nth-child(3):hover {
+  color: #25d366;
+}
+.footer__container .footer .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+.footer__container .footer .content .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}

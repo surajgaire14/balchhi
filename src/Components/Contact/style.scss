@@ -1,0 +1,57 @@
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    p{
+        font-size: 1.3rem;
+    }
+    h2{
+        font-weight: 600;
+    }
+  }
+
+  .location__container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    .contact {
+      width: 50%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      place-items: center;
+
+      .grid__item {
+        border-radius: 5px;
+        border: 1px solid #0003;
+        width: 16vw;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .3s all ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .icons {
+          display: flex;
+        }
+      }
+    }
+  }
+  .map {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+}
