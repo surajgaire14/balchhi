@@ -35,9 +35,15 @@ const Persons = [
 
 function Testimonials() {
   return (
-    <div style={{ width: "100%", marginTop: "50px" }}>
+    <div
+      style={{ width: "100%", marginTop: "50px" }}
+      data-aos="fade-up"
+      data-aos-delay={50}
+      data-aos-duration={1000}
+      data-aos-easing="ease-in-out"
+    >
       <Swiper
-        slidesPerView={2}
+        slidesPerView={window.innerWidth > 768 ? 2 : 1}
         spaceBetween={5}
         modules={[Pagination, Autoplay]}
         loop={true}

@@ -15,7 +15,7 @@
 }
 @media (max-width: 425px) {
   .hero__container {
-    margin: 10px 0 30px;
+    margin-top: 60px;
   }
 }
 .hero__container .about {
@@ -39,7 +39,11 @@
 }
 @media (min-width: 426px) and (max-width: 768px) {
   .hero__container .about {
-    width: 50%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: left;
   }
 }
 @media (max-width: 425px) {

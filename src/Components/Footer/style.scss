@@ -11,39 +11,99 @@
     justify-content: space-between;
     flex-direction: column;
 
-    .about {
+    .content__container {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin: 20px 0;
-      .icons {
+      width: 100%;
+      margin: auto;
+      justify-content: space-between;
+
+      @media (max-width: 425px) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .about {
         display: flex;
-        gap: 15px;
-        a {
-          color: #fff;
-          font-size: 2rem;
-          &:nth-child(1):hover {
-            color: #4267b2;
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+
+        @media (max-width: 425px) {
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
+        @media (min-width:425px) and (max-width:768px) {
+          width: 40%;
+        }
+
+        h3 {
+          @media (min-width: 425px) and (max-width: 768px) {
+            font-size: 2rem;
           }
-          &:nth-child(2):hover {
-            color: #c13584;
+        }
+
+        p {
+          @media (min-width: 425px) and (max-width: 768px) {
+            font-size: 1.1rem;
           }
-          &:nth-child(3):hover {
-            color: #25d366;
+        }
+
+        .icons {
+          display: flex;
+          gap: 15px;
+          a {
+            color: #fff;
+            font-size: 2rem;
+            &:nth-child(1):hover {
+              color: #4267b2;
+            }
+            &:nth-child(2):hover {
+              color: #c13584;
+            }
+            &:nth-child(3):hover {
+              color: #25d366;
+            }
+            @media (min-width: 425px) and (max-width: 768px) {
+              font-size: 1.5rem;
+            }
+          }
+          @media (max-width: 425px) {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
           }
         }
       }
-    }
-    .content {
+      .content {
         display: flex;
         gap: 30px;
         margin: 20px 0;
 
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+        h5 {
+          @media (min-width:425px) and (max-width:768px) {
+            font-size: 1.3rem;
+          }
         }
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+            @media (min-width:425px) and (max-width:768px) {
+              font-size: 1rem;
+          }
+        }
+      }
+    }
+    .copyright {
+      p {
+        @media (min-width: 425px) and (max-width: 768px) {
+          font-size: 1rem;
+        }
+      }
     }
   }
 }

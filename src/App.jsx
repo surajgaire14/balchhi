@@ -9,8 +9,14 @@ import Testimonials from "./Components/Testimonials/Testimonials";
 import Gallery from "./Components/Gallery/Gallery"
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import Aos from 'aos'
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    Aos.init()
+  },[])
+
   return (
     <>
       <Navbar />

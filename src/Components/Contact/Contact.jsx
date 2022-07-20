@@ -1,10 +1,17 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import "./style.css"
+import "./style.css";
 
 const Contact = () => {
   return (
-    <div className="contact__container">
+    <div
+      className="contact__container"
+      id="Contact"
+      data-aos="fade-up"
+      data-aos-delay={50}
+      data-aos-duration={1000}
+      data-aos-easing="ease-in-out"
+    >
       <div className="about">
         <Typography variant="h2" component={"h2"}>
           Contact <span style={{ color: "orangered" }}> Us</span>
@@ -65,6 +72,7 @@ const Contact = () => {
             height="335"
             style={{ border: "1px solid grey", borderRadius: "5px" }}
             loading="lazy"
+            className="balchhi__map"
           ></iframe>
         </div>
       </div>

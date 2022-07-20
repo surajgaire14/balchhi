@@ -15,7 +15,13 @@ const images = [one, two, three, four];
 
 function Memories() {
   return (
-    <div className="gallery__container">
+    <div
+      className="gallery__container"
+      data-aos="fade-up"
+      data-aos-delay={50}
+      data-aos-duration={1000}
+      data-aos-easing="ease-in-out"
+    >
       <div className="about">
         <Typography variant="h1" component={"h1"}>
           Our <span style={{ color: "orangered" }}>Popular</span> places

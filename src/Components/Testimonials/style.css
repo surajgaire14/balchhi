@@ -12,11 +12,10 @@
   border-radius: 5px;
   gap: 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .testimonial {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 80vw;
   }
 }
 .testimonial:hover {
