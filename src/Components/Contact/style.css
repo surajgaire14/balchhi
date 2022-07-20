@@ -32,6 +32,18 @@
   width: 100%;
   gap: 20px;
 }
+@media (max-width: 425px) {
+  .contact__container .location__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .contact__container .location__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .contact__container .location__container .contact {
   width: 50%;
   display: -ms-grid;
@@ -39,6 +51,20 @@
   -ms-grid-columns: (minmax(0, 1fr))[2];
   grid-template-columns: repeat(2, minmax(0, 1fr));
   place-items: center;
+}
+@media (max-width: 425px) {
+  .contact__container .location__container .contact {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 20px;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .contact__container .location__container .contact {
+    gap: 20px;
+    width: 100%;
+  }
 }
 .contact__container .location__container .contact .grid__item {
   border-radius: 5px;
@@ -61,6 +87,17 @@
   cursor: pointer;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
+  gap: 5px;
+}
+@media (max-width: 425px) {
+  .contact__container .location__container .contact .grid__item {
+    width: 100%;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .contact__container .location__container .contact .grid__item {
+    width: 100%;
+  }
 }
 .contact__container .location__container .contact .grid__item:hover {
   -webkit-transform: scale(1.1);
@@ -70,6 +107,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
 }
 .contact__container .map {
   width: 50%;
@@ -79,5 +118,32 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 30px;
+}
+@media (max-width: 425px) {
+  .contact__container .map {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .contact__container .map {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .contact__container .map .balchhi__map {
+    width: 100%;
+  }
 }

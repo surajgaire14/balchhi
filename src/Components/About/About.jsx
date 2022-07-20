@@ -6,7 +6,7 @@ import "./style.css"
 
 export default function About() {
   return (
-    <div className="about_container" id="About">
+    <div className="about_container" id="About Us">
         <div
           className="image"
           data-aos={"fade-up"}
@@ -15,9 +15,10 @@ export default function About() {
         </div>
         <div
           className="content"
-          data-aos={"fade-up"}
-          data-aos-duration="900"
-          data-aos-easing
+          data-aos="fade-up"
+          data-aos-delay={50}
+          data-aos-duration={1000}
+          data-aos-easing="ease-in-out"
         >
           <div className="title">
             <Typography component={"h1"} variant="h1">

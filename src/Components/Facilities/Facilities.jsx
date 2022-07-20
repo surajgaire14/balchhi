@@ -26,7 +26,14 @@ const icons = [
 
 const Facilities = () => {
   return (
-    <div className="facilities__container" id="facilities__container">
+    <div
+      className="facilities__container"
+      id="Facilities"
+      data-aos="fade-up"
+      data-aos-delay={50}
+      data-aos-duration={1500}
+      data-aos-easing="ease-in-out"
+    >
       <div className="about">
         <Typography variant="h2" component={"h2"}>
           Our <span className="span">Facilities</span> for you
@@ -39,38 +46,6 @@ const Facilities = () => {
         <button>Contact Now</button>
       </div>
       <div className="facilities">
-        {/* <div>
-          <i className="ri-wifi-fill icon"></i>
-          <Typography>Free Wifi</Typography>
-        </div>
-        <div>
-          <BreakfastDining className="icon" />
-          <Typography>Breakfast</Typography>
-        </div>
-        <div>
-          <LocalParking className="icon" />
-          <Typography>Parking</Typography>
-        </div>
-        <div>
-          <WorkOutline className="icon" />
-          <Typography>Working Space</Typography>
-        </div>
-        <div>
-          <i className="fa-solid fa-bolt-lightning icon"></i>
-          <Typography component="p">24hr electricity</Typography>
-        </div>
-        <div>
-          <i className="fa-solid fa-person-swimming icon"></i>
-          <Typography>Swimming Pool</Typography>
-        </div>
-        <div>
-          <i className="fa-solid fa-utensils icon"></i>
-          <Typography>Dinner</Typography>
-        </div>
-        <div>
-          <i className="fa-solid fa-utensils icon"></i>
-          <Typography>Others</Typography>
-        </div> */}
         {icons.map(({ name, icon }, i) => {
           return (
             <div key={i}>

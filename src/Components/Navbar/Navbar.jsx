@@ -12,8 +12,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Slide } from "@mui/material";
 import { Close } from "@mui/icons-material";
-import { Link } from "react-scroll";
+import { animateScroll, Link } from "react-scroll";
 import UpdateScrollPosition from "../../Hooks/UpdateScrollPosition";
+import logo from "../../images/balchhiLogo.jpg"
 import "./style.css";
 
 const drawerWidth = "100%";
@@ -24,7 +25,6 @@ export default function Navbar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
   const containerRef = React.useRef(null);
-  console.log(checked);
 
   let scrollPosition = UpdateScrollPosition();
   console.log(scrollPosition);
@@ -36,7 +36,7 @@ export default function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", padding: 0 }}>
-      <List style={{padding:0}}>
+      <List style={{ padding: 0 }}>
         {navItems.map((item, i) => (
           <ListItem key={i} style={{ borderBottom: "1px solid #0002" }}>
             <ListItemButton sx={{ textAlign: "left" }}>
@@ -48,6 +48,7 @@ export default function Navbar(props) {
     </Box>
   );
 
+
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
@@ -58,14 +59,15 @@ export default function Navbar(props) {
         style={{
           zIndex: 1400,
           color: "#000",
-          background: "#fff",
+          background: "transparent",
           borderBottom: "1px solid #0002",
           boxShadow: "none",
         }}
         ref={containerRef}
         position="fixed"
-        // disablePadding
-        disablepadding = {true}
+        disablepadding={true}
+        className={`${scrollPosition > 30 && "Shadow"}`}
+        id="Home"
       >
         <Toolbar
           style={{
@@ -88,7 +90,7 @@ export default function Navbar(props) {
           </IconButton>
           <Link to="/" style={{ width: "5rem", cursor: "pointer" }}>
             <img
-              src="https://scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/277554159_536567404564886_8179199460324938164_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=y8gqtRtigNcAX9Q4d0v&_nc_ht=scontent.fktm8-1.fna&oh=00_AT82lmTxEbKT6_TCe5rh0sRWlZ9ps8Jn31r55a_ozohPRA&oe=62D55D9E"
+              src={logo}
               alt="logo"
               style={{ borderRadius: "50%", width: "100%" }}
             />
@@ -101,9 +103,27 @@ export default function Navbar(props) {
                   cursor: "pointer",
                   fontSize: "18px",
                   lineHeight: "28px",
-                  color: "#000",
+                  color: scrollPosition > 30 ? "#000" : "#000",
+                  fontWeight:scrollPosition > 30 ? "bold" : "normal"
                 }}
-                to={`${item}`}
+                className={`${
+                  item === "Home" && scrollPosition < 627
+                    ? "active"
+                    : item === "Facilities" &&
+                      scrollPosition >= 627 &&
+                      scrollPosition < 1500
+                    ? "active"
+                    : item === "About Us" &&
+                      scrollPosition > 1500 &&
+                      scrollPosition < 2400
+                    ? "active"
+                    : item === "Contact" && scrollPosition > 2400 && "active"
+                }`}
+                to={item === "Home" ? "" : item}
+                smooth={true}
+                offset={-100}
+                duration={1000}
+                onClick={item == "Home" && animateScroll.scrollToTop}
               >
                 {item}
               </Link>
@@ -111,7 +131,9 @@ export default function Navbar(props) {
           </Box>
           <Button
             style={{ background: "orangered", color: "#fff" }}
-            sx={{ display: { xs:"none",sm: "block", md: "block", lg: "block" } }}
+            sx={{
+              display: { xs: "none", sm: "block", md: "block", lg: "block" },
+            }}
           >
             Contact Us
           </Button>

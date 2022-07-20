@@ -12,14 +12,7 @@ const Footer = () => {
   return (
     <div className="footer__container">
       <div className="footer">
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            margin: "auto",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="content__container">
           <div className="about">
             <Typography variant="h3" component={"h3"}>
               Balchhi Resort
@@ -60,7 +53,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="copyright">
-          <Typography style={{ textAlign: "center",margin:"10px 0" }}>
+          <Typography style={{ textAlign: "center", margin: "10px 0" }}>
             Copyright © 2022 Balchhi. All Right ReservedMade with ♥ byThe Boring
             School
           </Typography>
