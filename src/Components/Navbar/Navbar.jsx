@@ -14,7 +14,7 @@ import { Slide } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { animateScroll, Link } from "react-scroll";
 import UpdateScrollPosition from "../../Hooks/UpdateScrollPosition";
-import logo from "../../images/balchhiLogo.jpg"
+import logo from "../../images/balchhiLogo.jpg";
 import "./style.css";
 
 const drawerWidth = "100%";
@@ -40,14 +40,15 @@ export default function Navbar(props) {
         {navItems.map((item, i) => (
           <ListItem key={i} style={{ borderBottom: "1px solid #0002" }}>
             <ListItemButton sx={{ textAlign: "left" }}>
-              <ListItemText primary={item} />
+              <Link key={i} to={item === "Home" ? "" : item}>
+                {/* <ListItemText primary={item} /> */} {item}
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
     </Box>
   );
-
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -57,9 +58,9 @@ export default function Navbar(props) {
       <AppBar
         component="nav"
         style={{
-          zIndex: 1400,
+          zIndex: 1500,
           color: "#000",
-          background: "transparent",
+          background: "#f3f3f5",
           borderBottom: "1px solid #0002",
           boxShadow: "none",
         }}
@@ -88,7 +89,11 @@ export default function Navbar(props) {
           >
             {!checked ? <MenuItem /> : <Close />}
           </IconButton>
-          <Link to="/" style={{ width: "5rem", cursor: "pointer" }}>
+          <Link
+            to="/"
+            style={{ width: "5rem", cursor: "pointer" }}
+            className="image__link"
+          >
             <img
               src={logo}
               alt="logo"
@@ -104,7 +109,7 @@ export default function Navbar(props) {
                   fontSize: "18px",
                   lineHeight: "28px",
                   color: scrollPosition > 30 ? "#000" : "#000",
-                  fontWeight:scrollPosition > 30 ? "bold" : "normal"
+                  fontWeight: scrollPosition > 30 ? "bold" : "normal",
                 }}
                 className={`${
                   item === "Home" && scrollPosition < 627

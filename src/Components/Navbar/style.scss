@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-#root
-  > div
-  > nav.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation1.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionFixed.mui-fixed.css-1jrbdul-MuiPaper-root-MuiAppBar-root
-  > div
-  > button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
-  @media (max-width: 425px) {
-    display: none;
-  }
-}
-
 button {
   @media (max-width: 425px) {
     display: none;
@@ -28,15 +18,18 @@ button {
 
 .Shadow {
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.1) !important;
-//   border-radius: 16px;
+  // background: rgba(255, 255, 255, 0.1) !important;
+  background:#fff;
+  //   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(2.8px);
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  color: white;
+  border-bottom: 1px solid #0001;
+  color: #fff;
 }
 
 .active {
   border-bottom: 3px solid orangered;
 }
+
