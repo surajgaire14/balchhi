@@ -5,10 +5,9 @@
   margin-bottom: 60px;
   padding: 30px 0;
 
-  @media (max-width: 768px) {
+  @media (min-width:769px) and (max-width:1025px) {
     margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .about {
@@ -22,11 +21,16 @@
       @media (max-width:426px) {
         font-size: 1rem;
       }
+      @media (min-width:426px) and (max-width:769px) {
+        margin-bottom: 15px;
+      }
+      @media (min-width:769px) and (max-width:1025px) {
+        margin-bottom: 0;
+      }
     }
     h1 {
       font-size: 3.2rem;
       font-weight: 600;
-
     }
   }
 
@@ -49,10 +53,14 @@
             object-fit: cover;
           }
 
-          @media (min-width: 426px) and (max-width: 768px) {
+          @media (min-width: 426px) and (max-width: 769px) {
             width: 40vw;
             object-fit: cover;
           }
+          // @media (min-width:769px) and (max-width:1025px) {
+          //   width: 33%;
+          //   object-fit: cover;
+          // }
 
           // @media (min-width:768px) and (max-width:1024px) {
           //   object-fit: cover;

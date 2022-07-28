@@ -5,6 +5,7 @@ import {
   WorkOutline,
 } from "@mui/icons-material";
 import { Typography } from "@mui/material";
+import PhishingIcon from "@mui/icons-material/Phishing";
 import "./style.css";
 
 const icons = [
@@ -17,8 +18,8 @@ const icons = [
     icon: <i className="fa-solid fa-bolt-lightning icon"></i>,
   },
   {
-    name: "Swimmingpool",
-    icon: <i className="fa-solid fa-person-swimming icon"></i>,
+    name: "Fishing",
+    icon: <PhishingIcon className="icon" fontSize="2rem" />,
   },
   { name: "Dinner", icon: <i className="fa-solid fa-utensils icon"></i> },
   { name: "Others", icon: <i className="ri-wifi-fill icon"></i> },

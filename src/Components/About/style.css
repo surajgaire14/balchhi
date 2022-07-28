@@ -17,29 +17,36 @@
     margin: 20px 0;
   }
 }
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 769px) {
   .about_container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    gap: 20px;
+    gap: 10px;
+    margin: 10px 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .about_container {
+    gap: 5px;
+    margin: 0;
   }
 }
 .about_container .image {
   width: 50%;
 }
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .about_container .image {
     width: 100%;
   }
 }
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 769px) {
   .about_container .image {
     width: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1025px) {
   .about_container .image {
     width: 100%;
   }
@@ -50,15 +57,21 @@
      object-fit: cover;
   border-radius: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 426px) {
+  .about_container .image img {
+    width: 100%;
+    height: 50vh;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
   .about_container .image img {
     width: 80%;
     height: 40vh;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1025px) {
   .about_container .image img {
-    width: 70%;
+    width: 90%;
   }
 }
 .about_container .content {
@@ -73,26 +86,36 @@
   font-size: 1.1rem;
   width: 50%;
 }
-@media (max-width: 425px) {
-  .about_container .content {
-    width: 100%;
-  }
-}
-@media (min-width: 425px) and (max-width: 768px) {
-  .about_container .content {
-    width: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .about_container .content {
-    width: 100%;
-  }
-}
-.about_container .content h1 {
+.about_container .content .title h1 {
   font-size: 3.5rem;
 }
-.about_container .content h1 span {
+.about_container .content .title h1 span {
   color: orangered;
+}
+@media (max-width: 426px) {
+  .about_container .content .title h1 {
+    text-align: center;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .about_container .content .title h1 {
+    text-align: left;
+  }
+}
+@media (max-width: 426px) {
+  .about_container .content {
+    width: 100%;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .about_container .content {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1025px) {
+  .about_container .content {
+    width: 100%;
+  }
 }
 .about_container .content button {
   margin-top: 15px;
@@ -104,7 +127,7 @@
   cursor: pointer;
   font-size: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .about_container .content button {
     max-width: 50vw;
     width: 100%;

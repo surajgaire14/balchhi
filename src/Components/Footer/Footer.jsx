@@ -54,9 +54,9 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <Typography style={{ textAlign: "center", margin: "10px 0" }}>
-            Copyright © 2022 Balchhi. All Right ReservedMade with ♥ byThe Boring
-            School
+            Copyright © 2022 Balchhi. All Right Reserved.
           </Typography>
+          <Typography style={{textAlign:"center"}}>Made with ♥ byThe Boring School</Typography>
         </div>
       </div>
     </div>

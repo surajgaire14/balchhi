@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 import { Modal } from "@mui/material";
 import "./style.css"
 
-const Hero = () => {
+const Hero = ({ref}) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -17,7 +17,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero__container">
+    <div className="hero__container" ref={ref}>
       <div className="about">
         <div className="blob animate__animated animate__pulse animate__infinite	infinite"></div>
         <div className="blob1 animate__animated animate__pulse animate__infinite	infinite"></div>
