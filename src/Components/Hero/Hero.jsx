@@ -16,6 +16,8 @@ const Hero = ({ref}) => {
     setOpen(false);
   };
 
+  console.log(window.innerWidth)
+
   return (
     <div className="hero__container" ref={ref}>
       <div className="about">
@@ -44,7 +46,7 @@ const Hero = ({ref}) => {
           <div className="iframe-wrapper">
             <iframe
               src="https://www.youtube.com/embed/wTULrEWmNqs"
-              width={"1200px"}
+              // width={` ${window.innerWidth > 0 && window.innerWidth <426 ? "410px" : "760px"}`}
               height={"800px"}
               style={{
                 position: "absolute",

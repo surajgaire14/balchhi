@@ -108,11 +108,7 @@ export default function Navbar(props) {
           >
             {!checked ? <MenuItem /> : <Close />}
           </IconButton>
-          <Link
-            to="/"
-            style={{ cursor: "pointer" }}
-            className="image__link"
-          >
+          <Link to="/" style={{ cursor: "pointer" }} className="image__link">
             <img
               src={logo}
               alt="logo"
@@ -157,7 +153,7 @@ export default function Navbar(props) {
               </Link>
             ))}
           </Box>
-          <div style={{display:"flex"}} className="buttonBox">
+          <div style={{ display: "flex" }} className="buttonBox">
             <Button
               style={{ background: "orangered", color: "#fff" }}
               sx={{
@@ -180,31 +176,31 @@ export default function Navbar(props) {
         </Toolbar>
       </AppBar>
       <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "block", md: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-              height: "35vh",
-              marginTop: "80px",
-              fill: (theme) => theme.palette.common.white,
-              stroke: (theme) => theme.palette.divider,
-              strokeWidth: 1,
-            },
-          }}
-        >
-          <Slide direction="down" in={checked} container={containerRef.current}>
+        <Slide direction="down" in={checked} container={containerRef.current}>
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: "block", sm: "block", md: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+                height: "35vh",
+                marginTop: "80px",
+                fill: (theme) => theme.palette.common.white,
+                stroke: (theme) => theme.palette.divider,
+                strokeWidth: 1,
+              },
+            }}
+          >
             {drawer}
-          </Slide>
-        </Drawer>
+          </Drawer>
+        </Slide>
       </Box>
     </Box>
   );

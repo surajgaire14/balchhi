@@ -1,3 +1,24 @@
+.iframe {
+  @media (max-width: 426px) {
+    width: 420px;
+    height: 500px;
+  }
+
+  @media (min-width: 426px) and (max-width: 769px) {
+    width: 760px;
+    height: 600px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1025px) {
+    width: 1000px;
+    height: 700px;
+  }
+  @media (min-width: 1025px) and (max-width: 1441px) {
+    width: 1300px;
+    height: 700px;
+  }
+}
+
 .hero__container {
   display: flex;
   justify-content: space-between;
@@ -12,7 +33,7 @@
     margin-top: 110px;
   }
 
-  @media (min-width:426px) and (max-width:768px) {
+  @media (min-width: 426px) and (max-width: 768px) {
     margin-bottom: 30px;
   }
 
@@ -87,11 +108,11 @@
       }
 
       @media (min-width: 426px) and (max-width: 769px) {
-        top: .5vh;
+        top: 0.5vh;
         opacity: 0.4;
       }
-       
-      @media (min-width:769px) and (max-width:1025px) {
+
+      @media (min-width: 769px) and (max-width: 1025px) {
         top: 5vh;
       }
     }
@@ -106,19 +127,19 @@
         width: 40vw;
       }
 
-      @media (min-width:426px) and (max-width:769px) {
+      @media (min-width: 426px) and (max-width: 769px) {
         top: 75vh;
         width: 40vw;
-        right: .1vw;
+        right: 0.1vw;
         opacity: 0.5;
       }
-      @media (min-width:769px) and (max-width:1025px) {
+      @media (min-width: 769px) and (max-width: 1025px) {
         top: 50vh;
         right: 0;
         left: auto;
         width: 40vw;
       }
-      @media (min-width:1025px) and (max-width:1441px) {
+      @media (min-width: 1025px) and (max-width: 1441px) {
         top: 20vh;
         right: 0vw;
         width: 40vw;
@@ -143,7 +164,7 @@
         color: orangered;
       }
 
-      @media (min-width:426px) and (max-width:768px) {
+      @media (min-width: 426px) and (max-width: 768px) {
         margin-top: 10px;
       }
     }
@@ -154,12 +175,12 @@
     width: 33vw;
     border-radius: 10px;
 
-    @media (min-width:426px) and (max-width: 769px) {
+    @media (min-width: 426px) and (max-width: 769px) {
       width: 100%;
       margin-top: 20px;
       height: 55vh;
     }
-    @media (max-width:426px) {
+    @media (max-width: 426px) {
       margin-top: 10px;
       width: 100%;
     }
