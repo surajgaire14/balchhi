@@ -14,6 +14,7 @@ import "./style.css";
 const images = [one, two, three, four];
 
 function Memories() {
+  const [hovered,setHovered] = React.useState(false)
   return (
     <div className="gallery__container">
       <div className="about">
@@ -31,16 +32,16 @@ function Memories() {
             window.innerWidth >= 992 ? 3 : 1 && window.innerWidth >= 768 ? 2 : 1
           }
           modules={[Navigation, EffectFade]}
-          spaceBetween={10}
+          spaceBetween={!hovered ? 10 : 5}
           navigation={true}
         >
           {images.map((image, i) => {
             return (
               <SwiperSlide key={i} className="image__container">
-                <img
+                <img 
                   src={image}
                   alt={`{${i} -image}`}
-                  style={{ cursor: "pointer" }}
+                  style={{ cursor: "pointer",}}
                 />
               </SwiperSlide>
             );

@@ -10,7 +10,7 @@ import Gallery from "../Components/Gallery/Gallery";
 import Contact from "../Components/Contact/Contact";
 import Footer from "../Components/Footer/Footer";
 import Aos from "aos";
-import React,{ useEffect } from "react";
+import React, { useEffect } from "react";
 
 const Home = () => {
   useEffect(() => {
@@ -25,18 +25,20 @@ const Home = () => {
   const GalleryRef = React.useRef();
   const ContactRef = React.useRef();
 
+  const refs = {
+    HeroRef,
+    MemoriesRef,
+    FacilitiesRef,
+    AboutRef,
+    TestimonialsRef,
+    GalleryRef,
+    ContactRef,
+  };
+
   return (
     <>
-      <Navbar
-        Hero={HeroRef}
-        Memories={MemoriesRef}
-        Facilities={FacilitiesRef}
-        About={AboutRef}
-        Testimonials={TestimonialsRef}
-        Gallery={GalleryRef}
-        Contact={ContactRef}
-      />
-      <div style={{ width: "100vw" }}>
+      <Navbar refs={refs} />
+      <main style={{ width: "100vw" }} id="main">
         <div style={{ width: "80%", margin: "auto" }}>
           <Hero ref={HeroRef} />
           <Memories ref={MemoriesRef} />
@@ -58,7 +60,7 @@ const Home = () => {
           <Contact ref={ContactRef} />
         </div>
         <Footer />
-      </div>
+      </main>
     </>
   );
 };

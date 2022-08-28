@@ -14,14 +14,14 @@ import { Slide } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { animateScroll, Link } from "react-scroll";
 import UpdateScrollPosition from "../../Hooks/UpdateScrollPosition";
-import logo from "../../images/balchhiLogo.jpg";
+import logo from "../../images/balchhiLogo1.png";
 import "./style.css";
 
 const drawerWidth = "100%";
 const navItems = ["Home", "Facilities", "About Us", "Contact"];
 
-export default function Navbar(props) {
-  const { window } = props;
+export default function Navbar({refs}) {
+  // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [tabOpen, setTabOpen] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
@@ -35,7 +35,10 @@ export default function Navbar(props) {
     setTabOpen(!tabOpen);
     setChecked((prev) => !prev);
   };
-  console.log(props);
+  console.log(window)
+  console.log(refs)
+
+  const {HeroRef,AboutRef,GalleryRef,FacilitiesRef,ContactRef} = refs
 
   // const theme = createTheme({
   //   breakpoints:{
@@ -49,6 +52,10 @@ export default function Navbar(props) {
   //   }
   // })
 
+  // const scrollToElement = (ref) => {
+  //   window.scrollTo({top:ref.current.offset-50,behavior:"smooth"})
+  // }
+  
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", padding: 0 }}>
       <List style={{ padding: 0 }}>
@@ -65,8 +72,8 @@ export default function Navbar(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  // const container =
+  //   window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box
@@ -81,11 +88,12 @@ export default function Navbar(props) {
           background: "#f3f3f5",
           borderBottom: "1px solid #0002",
           boxShadow: "none",
+          
         }}
         ref={containerRef}
         position="fixed"
-        disablepadding={true}
-        className={`${scrollPosition > 30 && "Shadow"}`}
+        // disablepadding={true}
+        className={`${scrollPosition > 30 && !checked && "Shadow"}`}
         id="Home"
       >
         <Toolbar
@@ -113,6 +121,7 @@ export default function Navbar(props) {
               src={logo}
               alt="logo"
               style={{ borderRadius: "50%", width: "5rem" }}
+              className= "images"
             />
           </Link>
           <Box
@@ -135,17 +144,17 @@ export default function Navbar(props) {
                     ? "active"
                     : item === "Facilities" &&
                       scrollPosition >= 627 &&
-                      scrollPosition < 1500
+                      scrollPosition < 1461
                     ? "active"
                     : item === "About Us" &&
-                      scrollPosition > 1500 &&
+                      scrollPosition > 1460 &&
                       scrollPosition < 2400
                     ? "active"
                     : item === "Contact" && scrollPosition > 2400 && "active"
                 }`}
                 to={item === "Home" ? "" : item}
                 smooth={true}
-                offset={-150}
+                offset={-170}
                 duration={1000}
                 onClick={item == "Home" && animateScroll.scrollToTop}
               >
@@ -178,7 +187,7 @@ export default function Navbar(props) {
       <Box component="nav">
         <Slide direction="down" in={checked} container={containerRef.current}>
           <Drawer
-            container={container}
+            // container={container}
             variant="temporary"
             open={mobileOpen}
             onClose={handleDrawerToggle}

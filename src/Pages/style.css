@@ -16,14 +16,19 @@
           flex-direction: column;
 }
 .notFound__container h2 {
-  font-size: 2.2rem;
+  font-size: 2.2em;
   font-weight: 600;
 }
 .notFound__container p {
-  margin: 25px 0;
-  width: 500px;
+  margin: 1.56em 0;
+  width: 31.25em;
   text-align: center;
   color: rgba(0, 0, 0, 0.4666666667);
+}
+@media (max-width: 426px) {
+  .notFound__container p {
+    width: 25em;
+  }
 }
 .notFound__container img {
   width: 400px;

@@ -25,6 +25,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  margin: 0.5vh 0;
 }
 .gallery__container .about p {
   font-weight: 500;
@@ -68,6 +69,11 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
+}
+.gallery__container .swiperContainer .swiperSlide .image__container img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 @media (max-width: 425px) {
   .gallery__container .swiperContainer .swiperSlide .image__container img {

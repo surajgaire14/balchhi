@@ -1,5 +1,6 @@
 import React from "react";
 import notFoundImage from "../assets/notf.png";
+import notFound from "../assets/page-found.png"
 import "./style.css";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";

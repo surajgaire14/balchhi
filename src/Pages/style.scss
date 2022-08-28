@@ -7,15 +7,19 @@
   flex-direction: column;
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 2.2em;
     font-weight: 600;
   }
 
   p {
-    margin: 25px 0;
-    width: 500px;
+    margin: 1.56em 0;
+    // width: 500px;
+    width: 31.25em;
     text-align: center;
     color: #0007;
+    @media (max-width:426px) {
+        width: 25em;
+    }
   }
 
   img {
@@ -26,6 +30,7 @@
   .button {
     button {
       background-color: #007DFE;
+      // background-color: #FE8100;
       color: #fff;
       border-radius: 5px;
       padding: 10px;

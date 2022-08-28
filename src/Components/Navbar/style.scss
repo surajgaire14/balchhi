@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+.Shadow {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1) !important;
+  // background: #fff;
+  //   border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(2.8px);
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-bottom: 1px solid #0001;
+  color: #fff;
+}
+
 button {
   @media (max-width: 426px) {
     display: none;
@@ -32,22 +45,14 @@ button {
     justify-content: flex-end;
     width: 80%;
   }
+  img {
+    background: transparent;
+  }
 }
 
 
 
-.Shadow {
-  /* From https://css.glass */
-  // background: rgba(255, 255, 255, 0.1) !important;
-  background: #fff;
-  //   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
-  backdrop-filter: blur(15px) !important;
-  -webkit-backdrop-filter: blur(2.8px);
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  border-bottom: 1px solid #0001;
-  color: #fff;
-}
+
 
 .active {
   border-bottom: 3px solid orangered;
