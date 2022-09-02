@@ -40,9 +40,9 @@ const Facilities = () => {
           Our <span className="span">Facilities</span> for you
         </Typography>
         <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          mollitia iusto eligendi? Pariatur, accusantium? Itaque explicabo culpa
-          quas laudantium. Iste, nobis.
+          Balchhi is equipped with number of facilities such as Bar,Kitchen and
+          peaceful place to hangout.It has soothing sound and lighting system
+          and provides private dining to spend with your loved ones.
         </Typography>
         <button>Contact Now</button>
       </div>
