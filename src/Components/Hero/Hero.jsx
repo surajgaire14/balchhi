@@ -3,9 +3,9 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import hero from "../../images/hero1.jpg";
 import { Typography } from "@mui/material";
 import { Modal } from "@mui/material";
-import "./style.css"
+import "./style.css";
 
-const Hero = () => {
+const Hero = ({ ref }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
@@ -16,8 +16,10 @@ const Hero = () => {
     setOpen(false);
   };
 
+  console.log(window.innerWidth);
+
   return (
-    <div className="hero__container">
+    <div className="hero__container" ref={ref}>
       <div className="about">
         <div className="blob animate__animated animate__pulse animate__infinite	infinite"></div>
         <div className="blob1 animate__animated animate__pulse animate__infinite	infinite"></div>
@@ -43,9 +45,9 @@ const Hero = () => {
         >
           <div className="iframe-wrapper">
             <iframe
-              src="https://www.youtube.com/embed/wTULrEWmNqs"
-              width={"1200px"}
-              height={"800px"}
+              src="https://www.youtube.com/embed/cNRm9y6wQ9U"
+              // width={` ${window.innerWidth > 0 && window.innerWidth <426 ? "410px" : "760px"}`}
+              // height={"800px"}
               style={{
                 position: "absolute",
                 top: "50%",
@@ -55,7 +57,7 @@ const Hero = () => {
               className="iframe"
               id="modal-modal-video"
               frameborder="0"
-              title="balchhi_video"
+              title="Welcome to Balchhi"
               allowFullScreen
             ></iframe>
           </div>

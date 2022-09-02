@@ -17,7 +17,7 @@
       margin: auto;
       justify-content: space-between;
 
-      @media (max-width: 425px) {
+      @media (max-width: 426px) {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -34,19 +34,19 @@
           width: 100vw; 
         }
 
-        @media (min-width:426px) and (max-width:768px) {
+        @media (min-width:426px) and (max-width:769px) {
           width: 40%;
         }
 
         h3 {
-          @media (min-width: 425px) and (max-width: 768px) {
+          @media (min-width: 426px) and (max-width: 769px) {
             font-size: 2rem;
             text-align: center;
           }
         }
 
         p {
-          @media (min-width: 425px) and (max-width: 768px) {
+          @media (min-width: 426px) and (max-width: 769px) {
             font-size: 1.1rem;
           }
         }

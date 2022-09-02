@@ -6,7 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+// import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -14,15 +14,16 @@ import { Slide } from "@mui/material";
 import { Close } from "@mui/icons-material";
 import { animateScroll, Link } from "react-scroll";
 import UpdateScrollPosition from "../../Hooks/UpdateScrollPosition";
-import logo from "../../images/balchhiLogo.jpg";
+import logo from "../../images/balchhiLogo1.png";
 import "./style.css";
 
 const drawerWidth = "100%";
 const navItems = ["Home", "Facilities", "About Us", "Contact"];
 
-export default function Navbar(props) {
-  const { window } = props;
+export default function Navbar({refs}) {
+  // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [tabOpen, setTabOpen] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
   const containerRef = React.useRef(null);
 
@@ -31,9 +32,30 @@ export default function Navbar(props) {
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+    setTabOpen(!tabOpen);
     setChecked((prev) => !prev);
   };
+  console.log(window)
+  console.log(refs)
 
+  const {HeroRef,AboutRef,GalleryRef,FacilitiesRef,ContactRef} = refs
+
+  // const theme = createTheme({
+  //   breakpoints:{
+  //     values:{
+  //       xs:0,
+  //       sm:425,
+  //       md:768,
+  //       lg:1024,
+  //       xl:1440,
+  //     }
+  //   }
+  // })
+
+  // const scrollToElement = (ref) => {
+  //   window.scrollTo({top:ref.current.offset-50,behavior:"smooth"})
+  // }
+  
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", padding: 0 }}>
       <List style={{ padding: 0 }}>
@@ -50,11 +72,14 @@ export default function Navbar(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+  // const container =
+  //   window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }} style={{ transition: "all .5s ease-in-out" }}>
+    <Box
+      sx={{ display: "flex", sm: { display: "flex" } }}
+      style={{ transition: "all .5s ease-in-out" }}
+    >
       <AppBar
         component="nav"
         style={{
@@ -63,11 +88,12 @@ export default function Navbar(props) {
           background: "#f3f3f5",
           borderBottom: "1px solid #0002",
           boxShadow: "none",
+          
         }}
         ref={containerRef}
         position="fixed"
-        disablepadding={true}
-        className={`${scrollPosition > 30 && "Shadow"}`}
+        // disablepadding={true}
+        className={`${scrollPosition > 30 && !checked && "Shadow"}`}
         id="Home"
       >
         <Toolbar
@@ -75,6 +101,7 @@ export default function Navbar(props) {
             display: "flex",
             justifyContent: "space-between",
             width: "80%",
+            height: "100%",
             margin: "auto",
             alignItems: "center",
           }}
@@ -84,49 +111,50 @@ export default function Navbar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none", md: "none" } }}
             style={{ color: "#000" }}
           >
             {!checked ? <MenuItem /> : <Close />}
           </IconButton>
-          <Link
-            to="/"
-            style={{ width: "5rem", cursor: "pointer" }}
-            className="image__link"
-          >
+          <Link to="/" style={{ cursor: "pointer" }} className="image__link">
             <img
               src={logo}
               alt="logo"
-              style={{ borderRadius: "50%", width: "100%" }}
+              style={{ borderRadius: "50%", width: "5rem" }}
+              className= "images"
             />
           </Link>
-          <Box sx={{ display: { xs: "none", sm: "flex", gap: "50px" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "none", gap: "50px", md: "flex" },
+            }}
+          >
             {navItems.map((item, i) => (
               <Link
                 key={i}
                 style={{
                   cursor: "pointer",
                   fontSize: "18px",
-                  lineHeight: "28px",
+                  lineHeight: "20px",
                   color: scrollPosition > 30 ? "#000" : "#000",
-                  fontWeight: scrollPosition > 30 ? "bold" : "normal",
+                  fontWeight: scrollPosition > 30 ? "normal" : "normal",
                 }}
-                className={`${
+                className={`navLinks ${
                   item === "Home" && scrollPosition < 627
                     ? "active"
                     : item === "Facilities" &&
                       scrollPosition >= 627 &&
-                      scrollPosition < 1500
+                      scrollPosition < 1461
                     ? "active"
                     : item === "About Us" &&
-                      scrollPosition > 1500 &&
+                      scrollPosition > 1460 &&
                       scrollPosition < 2400
                     ? "active"
                     : item === "Contact" && scrollPosition > 2400 && "active"
                 }`}
                 to={item === "Home" ? "" : item}
                 smooth={true}
-                offset={-100}
+                offset={-170}
                 duration={1000}
                 onClick={item == "Home" && animateScroll.scrollToTop}
               >
@@ -134,20 +162,32 @@ export default function Navbar(props) {
               </Link>
             ))}
           </Box>
-          <Button
-            style={{ background: "orangered", color: "#fff" }}
-            sx={{
-              display: { xs: "none", sm: "block", md: "block", lg: "block" },
-            }}
-          >
-            Contact Us
-          </Button>
+          <div style={{ display: "flex" }} className="buttonBox">
+            <Button
+              style={{ background: "orangered", color: "#fff" }}
+              sx={{
+                display: { xs: "none", sm: "block", md: "block", lg: "block" },
+              }}
+            >
+              Contact Us
+            </Button>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ display: { sm: "block", md: "none", xs: "none" } }}
+              style={{ color: "#000" }}
+            >
+              {!checked ? <MenuItem /> : <Close />}
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
       <Box component="nav">
         <Slide direction="down" in={checked} container={containerRef.current}>
           <Drawer
-            container={container}
+            // container={container}
             variant="temporary"
             open={mobileOpen}
             onClose={handleDrawerToggle}
@@ -155,12 +195,12 @@ export default function Navbar(props) {
               keepMounted: true, // Better open performance on mobile.
             }}
             sx={{
-              display: { xs: "block", sm: "none" },
+              display: { xs: "block", sm: "block", md: "none" },
               "& .MuiDrawer-paper": {
                 boxSizing: "border-box",
                 width: drawerWidth,
                 height: "35vh",
-                marginTop: "85px",
+                marginTop: "80px",
                 fill: (theme) => theme.palette.common.white,
                 stroke: (theme) => theme.palette.divider,
                 strokeWidth: 1,

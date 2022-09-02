@@ -1,4 +1,7 @@
 import { Typography } from "@mui/material";
+import {Link, useNavigate } from "react-router-dom";
+// import { Link } from "@mui/icons-material";
+// import {Nav}
 import React from "react";
 import "./style.css";
 
@@ -9,6 +12,14 @@ const links = [
 ];
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleClick = (link) => {
+    if (link === "Location") {
+      console.log("clicked");
+      navigate("www.google.com");
+    }
+  };
+
   return (
     <div className="footer__container">
       <div className="footer">
@@ -35,6 +46,7 @@ const Footer = () => {
           </div>
           <div className="content">
             {links.map(({ name, link }, i) => {
+              console.log(link);
               return (
                 <div key={i}>
                   <Typography variant="h5" component={"h5"}>
@@ -43,7 +55,17 @@ const Footer = () => {
                   <div>
                     <div className="links">
                       {link.map((link, i) => {
-                        return <Typography key={i}>{link}</Typography>;
+                        return (
+                          <Typography
+                            component={"a"}
+                            variant={"a"}
+                            key={i}
+                            style={{ cursor: "pointer", color: "#fff" }}
+                            onClick={() => handleClick(link)}
+                          >
+                            {link}
+                          </Typography>
+                        );
                       })}
                     </div>
                   </div>
@@ -54,8 +76,10 @@ const Footer = () => {
         </div>
         <div className="copyright">
           <Typography style={{ textAlign: "center", margin: "10px 0" }}>
-            Copyright © 2022 Balchhi. All Right ReservedMade with ♥ byThe Boring
-            School
+            Copyright © 2022 Balchhi. All Right Reserved.
+          </Typography>
+          <Typography style={{ textAlign: "center" }}>
+            Made with ♥ byThe Boring School
           </Typography>
         </div>
       </div>

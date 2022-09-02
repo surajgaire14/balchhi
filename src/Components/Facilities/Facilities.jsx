@@ -5,6 +5,7 @@ import {
   WorkOutline,
 } from "@mui/icons-material";
 import { Typography } from "@mui/material";
+import PhishingIcon from "@mui/icons-material/Phishing";
 import "./style.css";
 
 const icons = [
@@ -17,8 +18,8 @@ const icons = [
     icon: <i className="fa-solid fa-bolt-lightning icon"></i>,
   },
   {
-    name: "Swimmingpool",
-    icon: <i className="fa-solid fa-person-swimming icon"></i>,
+    name: "Fishing",
+    icon: <PhishingIcon className="icon" fontSize="2rem" />,
   },
   { name: "Dinner", icon: <i className="fa-solid fa-utensils icon"></i> },
   { name: "Others", icon: <i className="ri-wifi-fill icon"></i> },
@@ -39,9 +40,9 @@ const Facilities = () => {
           Our <span className="span">Facilities</span> for you
         </Typography>
         <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          mollitia iusto eligendi? Pariatur, accusantium? Itaque explicabo culpa
-          quas laudantium. Iste, nobis.
+          Balchhi is equipped with number of facilities such as Bar,Kitchen and
+          peaceful place to hangout.It has soothing sound and lighting system
+          and provides private dining to spend with your loved ones.
         </Typography>
         <button>Contact Now</button>
       </div>

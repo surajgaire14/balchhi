@@ -4,22 +4,10 @@
   box-sizing: border-box;
 }
 
-button {
-  @media (max-width: 425px) {
-    display: none;
-  }
-}
-
-.MuiButton-root {
-  @media (max-width: 425px) {
-    display: none;
-  }
-}
-
 .Shadow {
   /* From https://css.glass */
-  // background: rgba(255, 255, 255, 0.1) !important;
-  background:#fff;
+  background: rgba(255, 255, 255, 0.1) !important;
+  // background: #fff;
   //   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(15px) !important;
@@ -29,7 +17,61 @@ button {
   color: #fff;
 }
 
+button {
+  @media (max-width: 426px) {
+    display: none;
+  }
+}
+
+.MuiButton-root {
+  @media (max-width: 426px) {
+    display: none;
+  }
+}
+
+.css-hyum1k-MuiToolbar-root {
+  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+#Home div {
+  padding: 0;
+}
+
+.image__link {
+  @media (max-width:426px) {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+  }
+  img {
+    background: transparent;
+  }
+}
+
+
+
+
+
 .active {
   border-bottom: 3px solid orangered;
 }
 
+#Home div {
+  div {
+    @media (min-width: 601px) and (max-width: 769px) {
+      font-size: 16px;
+      gap: 20px;
+    }
+  }
+  // a {
+
+  // }
+}
+
+//   @media (min-width: 425px) and (max-width: 769px) {
+//     width: 4rem;
+//   }
+// #Home div a {
+// }

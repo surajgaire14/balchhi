@@ -1,50 +1,17 @@
-import Navbar from "./Components/Navbar/Navbar";
-import Hero from "./Components/Hero/Hero";
-import "./App.css";
-import Memories from "./Components/Memories/Memories";
-import Facilities from "./Components/Facilities/Facilities";
-import About from "./Components/About/About";
-import { Typography } from "@mui/material";
-import Testimonials from "./Components/Testimonials/Testimonials";
-import Gallery from "./Components/Gallery/Gallery";
-import Contact from "./Components/Contact/Contact";
-import Footer from "./Components/Footer/Footer";
-import Aos from "aos";
-import { useEffect } from "react";
+import { useRoutes } from "react-router-dom";
+import Home from "./Pages/Home";
+import NotFound from "./Pages/NotFound";
+import React from "react";
 
 const App = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
+  let router = useRoutes([
+    {path:"/",element:<Home />},
+    {path:"/home",element:<Home />},
+    {path:"*",element:<NotFound />},
+  ])
 
-  return (
-    <>
-      <Navbar />
-      <div style={{ width: "100vw" }}>
-        <div style={{ width: "80%", margin: "auto" }}>
-          <Hero />
-          <Memories />
-          <Facilities />
-          <About />
-          <Typography
-            variant="h2"
-            component={"h1"}
-            style={{
-              textAlign: "center",
-              fontWeight: "600",
-              fontSize: window.innerWidth <= 425 && "2.5rem",
-            }}
-          >
-            What our <span style={{ color: "orangered" }}>Customer</span> say
-          </Typography>
-          <Testimonials />
-          <Gallery />
-          <Contact />
-        </div>
-        <Footer />
-      </div>
-    </>
-  );
-};
+  return router
+}
+
 
 export default App;

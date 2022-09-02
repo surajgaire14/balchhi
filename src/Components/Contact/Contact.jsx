@@ -17,10 +17,7 @@ const Contact = () => {
           Contact <span style={{ color: "orangered" }}> Us</span>
         </Typography>
         <Typography>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-          laborum sit ipsam fugiat dolorem, cum sapiente eligendi rerum
-          consectetur fuga, quas quam, animi autem sequi illum omnis pariatur
-          culpa voluptates?
+          Balchhi is easy to find so visitors can get quickly in touch with us.Contact us and make most of your eating background with us.
         </Typography>
       </div>
       <div className="location__container">
