@@ -1,7 +1,7 @@
 import React from "react";
 import gaire from "../../images/gaire.jpg";
 import riwaj from "../../images/riwaj.jpg";
-import laxman from "../../images/laxman.png";
+import laxman from "../../images/laxman.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Rating } from "@mui/material";
 import Testimonial from "./Testimonial";
@@ -22,14 +22,14 @@ const Persons = [
     img: riwaj,
     rating: <Rating value={5} readOnly />,
     review:
-      "It was a great experience staying at balchhi,it felt like a home and the service was top notch.",
+      "Thank you so much for providing best quality of services available in the town.",
   },
   {
     name: "Laxman Rai",
     img: laxman,
     rating: <Rating value={4} readOnly />,
     review:
-      "It was a great experience staying at balchhi,it felt like a home and the service was top notch.",
+      "It is a place to visit once in your lifetime.I have listened my friend recommendation and glad i did.",
   },
 ];
 
