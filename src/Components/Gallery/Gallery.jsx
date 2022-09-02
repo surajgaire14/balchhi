@@ -1,9 +1,13 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import one from "../../images/memories/1.jpg";
-import two from "../../images/memories/2.jpg";
-import three from "../../images/memories/3.jpg";
-import four from "../../images/memories/4.jpg";
+import one from "../../images/places/1.jpg";
+import two from "../../images/places/2.jpg";
+import three from "../../images/places/3.jpg";
+import four from "../../images/places/4.jpg";
+import five from "../../images/places/5.jpg";
+import six from "../../images/places/6.jpg";
+import seven from "../../images/places/7.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade } from "swiper";
 import "swiper/css";
@@ -11,7 +15,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import "./style.css";
 
-const images = [one, two, three, four];
+const images = [one, two, three, four, five, six, seven];
 
 function Memories() {
   return (
