@@ -17,7 +17,8 @@ const Contact = () => {
           Contact <span style={{ color: "orangered" }}> Us</span>
         </Typography>
         <Typography>
-          Balchhi is easy to find so visitors can get quickly in touch with us.Contact us and make most of your eating background with us.
+          Balchhi is easy to find so visitors can get quickly in touch with
+          us.Contact us and make most of your eating background with us.
         </Typography>
       </div>
       <div className="location__container">
