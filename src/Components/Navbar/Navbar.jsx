@@ -20,7 +20,7 @@ import "./style.css";
 const drawerWidth = "100%";
 const navItems = ["Home", "Facilities", "About Us", "Contact"];
 
-export default function Navbar({refs}) {
+export default function Navbar() {
   // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [tabOpen, setTabOpen] = React.useState(false);
@@ -28,33 +28,12 @@ export default function Navbar({refs}) {
   const containerRef = React.useRef(null);
 
   let scrollPosition = UpdateScrollPosition();
-  console.log(scrollPosition);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
     setTabOpen(!tabOpen);
     setChecked((prev) => !prev);
   };
-  console.log(window)
-  console.log(refs)
-
-  const {HeroRef,AboutRef,GalleryRef,FacilitiesRef,ContactRef} = refs
-
-  // const theme = createTheme({
-  //   breakpoints:{
-  //     values:{
-  //       xs:0,
-  //       sm:425,
-  //       md:768,
-  //       lg:1024,
-  //       xl:1440,
-  //     }
-  //   }
-  // })
-
-  // const scrollToElement = (ref) => {
-  //   window.scrollTo({top:ref.current.offset-50,behavior:"smooth"})
-  // }
   
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", padding: 0 }}>
@@ -71,9 +50,6 @@ export default function Navbar({refs}) {
       </List>
     </Box>
   );
-
-  // const container =
-  //   window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box
