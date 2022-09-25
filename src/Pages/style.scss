@@ -17,8 +17,8 @@
     width: 31.25em;
     text-align: center;
     color: #0007;
-    @media (max-width:426px) {
-        width: 25em;
+    @media (max-width: 426px) {
+      width: 25em;
     }
   }
 
@@ -29,7 +29,7 @@
 
   .button {
     button {
-      background-color: #007DFE;
+      background-color: #007dfe;
       // background-color: #FE8100;
       color: #fff;
       border-radius: 5px;
@@ -41,5 +41,14 @@
         transform: scale(0.98);
       }
     }
+  }
+}
+
+.menu__container {
+  width: 100vw;
+  margin-top: 6.25em;
+  .menu {
+    width: 80%;
+    margin: auto;
   }
 }
