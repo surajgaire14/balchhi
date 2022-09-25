@@ -1,154 +1,171 @@
 [
   {
-    "veg Momo": {
-      "steam": 130,
-      "kothe": 160,
-      "fry": 150,
-      "si_c": 190,
-      "sadheko": 170
-    },
-    "chicken Momo": {
-      "steam": 180,
-      "kothe": 200,
-      "fry": 190,
-      "si_c": 240,
-      "sadheko": 220
-    },
-    "Fish Momo": {
-      "steam": 180,
-      "kothe": 210,
-      "fry": 200,
-      "si_c": 240,
-      "sadheko": 220
-    },
-    "sadheko": {
-      "Chauchau Sadheko": 120,
-      "Peanut Sadheko": 200,
-      "Chicken Sadheko": 350,
-      "Bhattamas Sadheko": 160,
-      "Sadheko Mix": 200
-    },
-    "Chicken": {
-      "Chicken Chilly": 375,
-      "Chicken 65": 350,
-      "Chicken Lollipop": 350,
-      "Chicken Drumstick": 350,
-      "Chicken Wings Spicy": 350,
-      "Chicken Fry": 350,
-      "Crispy Chicken": 380,
-      "Chicken Legpiece": 330
-    },
-    "Fish": {
-      "BalChhi Special Tandoori Fish": 500,
-      "BalChhi Special Steam Fish": 500,
-      "Fish Fry": 350,
-      "Fish Soup": 300
-    },
-    "Chhoila": {
-      "Duck Chhoila": 390,
-      "Turkey Chhoila": 490,
-      "Chicken Chhoila": 330,
-      "Mushroom Chhoila": 350
-    },
-    "Soup": {
-      "chicken Hot and Sour": 250,
-      "Veg Mix Soup": 200,
-      "Mushroom Soup": 180
-    },
-    "Sweet Corn": {
-      "Boil": 200,
-      "Fry": 230,
-      "Salt and Pepper": 250,
-      "Corn Boil Sadheko": 350
-    },
-    "Sausage": {
-      "Fry": 330,
-      "Boil": 280,
-      "Chhily": 350
-    },
-    "Salad": {
-      "Green Salad": 220,
-      "Nepali Salad": 180,
-      "Fruit Salad": 270
-    },
-    "Rice and Briyani": {
-      "Plain Rice": 150,
-      "Veg Fried Rice": 150,
-      "Chicken Fried Rice": 150,
-      "Chickend Briyani": 150,
-      "Mutton Briyani": 150
-    },
-    "Veg": {
-      "Veg Mix Boil": 250,
-      "Veg Boil Sote": 300,
-      "Veg Mix Pakauda": 250,
-      "Paneer Pakauda": 330
-    },
-    "Tea": {
-      "Black Tea": 40,
-      "Milk Tea": 50
-    },
-    "Coffee": {
-      "Black Coffee": 60,
-      "Milk Coffee": 50
-    },
-    "Beverage": {
-      "Water": 50,
-      "Cold Drinks": 70,
-      "Red Bull": 170,
-      "Somersby": 300,
-      "Red Juice Per Glass": 120,
-      "Soda": 70,
-      "Lemon Soda": 90,
-      "Badam Soda": 150,
-      "Jumbo Cold Drinks 1.5Ltr.": 270,
-      "Lemon Sprite": 90,
-      "Hot Lemon with Honey": 130
-    },
-    "Pizza": {
-      "Veg Pizza": 350,
-      "Chicken Pizza": 400,
-      "Extra Cheese": 50
-    },
-    "Tandoori": {
-      "Tandoori Chicken": 600,
-      "Chicken Seekh Kabab": 550,
-      "Paneer Tikka": 400,
-      "Chicken Tikka": 430,
-      "Tandoori Roti": 30,
-      "Butter Roti": 40,
-      "Naan": 50,
-      "Butter Naan": 70,
-      "Garlic Naan": 90
-    },
-    "Curry": {
-      "Mix Vegetable": 270,
-      "Dal Fry": 250,
-      "Matar Paneer": 320,
-      "Paneer Butter Masala": 450,
-      "Local Chicken Curry": 370,
-      "Boiler Chicken Curry": 350,
-      "Fish Curry": 350,
-      "Mutton Curry": 400,
-      "Butter Chicken": 600
-    },
-    "Others": {
-      "Veg Thukpa": 200,
-      "Veg Chowmin": 130,
-      "Chicken Thukpa": 200,
-      "Chicken Chowmin": 130,
-      "Paneer Chilly": 375,
-      "Mushroom Chilly": 300,
-      "French Fry": 160,
-      "Papad": 25
-    },
-    "Balchhi Special": {
-      "Tawa Fish": 450,
-      "Local Chicken Poleko": 400,
-      "Fish Sukuti": 390,
-      "Mutton Sekuwa": 430,
-      "Mutton Bhutuwa": 270,
-      "Chicken Sekuwa": 320
-    }
+    "category": "Veg Momo",
+    "steam": 130,
+    "kothe": 160,
+    "fry": 150,
+    "si_c": 190,
+    "sadheko": 170
+  },
+  {
+    "category": "Chicken Momo",
+    "steam": 180,
+    "kothe": 200,
+    "fry": 190,
+    "si_c": 240,
+    "sadheko": 220
+  },
+  {
+    "category": "Fish Momo",
+    "steam": 180,
+    "kothe": 210,
+    "fry": 200,
+    "si_c": 240,
+    "sadheko": 220
+  },
+  {
+    "category":"Sadheko",
+    "Chauchau Sadheko": 120,
+    "Peanut Sadheko": 200,
+    "Chicken Sadheko": 350,
+    "Bhattamas Sadheko": 160,
+    "Sadheko Mix": 200
+  },
+  {
+    "category": "Chicken",
+    "Chicken Chilly": 375,
+    "Chicken 65": 350,
+    "Chicken Lollipop": 350,
+    "Chicken Drumstick": 350,
+    "Chicken Wings Spicy": 350,
+    "Chicken Fry": 350,
+    "Crispy Chicken": 380,
+    "Chicken Legpiece": 330
+  },
+  {
+    "category": "Fish",
+    "BalChhi Special Tandoori Fish": 500,
+    "BalChhi Special Steam Fish": 500,
+    "Fish Fry": 350,
+    "Fish Soup": 300
+  },
+  {
+    "category": "Chhoila",
+    "Duck Chhoila": 390,
+    "Turkey Chhoila": 490,
+    "Chicken Chhoila": 330,
+    "Mushroom Chhoila": 350
+  },
+  {
+    "category": "Soup",
+    "chicken Hot and Sour": 250,
+    "Veg Mix Soup": 200,
+    "Mushroom Soup": 180
+  },
+  {
+    "category": "Sweet Corn",
+    "Boil": 200,
+    "Fry": 230,
+    "Salt and Pepper": 250,
+    "Corn Boil Sadheko": 350
+  },
+  {
+    "category": "Sausage",
+    "Fry": 330,
+    "Boil": 280,
+    "Chhily": 350
+  },
+  {
+    "Green Salad": 220,
+    "Nepali Salad": 180,
+    "Fruit Salad": 270
+  },
+  {
+    "category": "Rice and Briyani",
+    "Plain Rice": 150,
+    "Veg Fried Rice": 150,
+    "Chicken Fried Rice": 150,
+    "Chickend Briyani": 150,
+    "Mutton Briyani": 150
+  },
+  {
+    "category": "Veg",
+    "Veg Mix Boil": 250,
+    "Veg Boil Sote": 300,
+    "Veg Mix Pakauda": 250,
+    "Paneer Pakauda": 330
+  },
+  {
+    "category": "Tea",
+    "Black Tea": 40,
+    "Milk Tea": 50
+  },
+  {
+    "Black Coffee": 60,
+    "Milk Coffee": 50
+  },
+  {
+    "category": "Beverage",
+    "Water": 50,
+    "Cold Drinks": 70,
+    "Red Bull": 170,
+    "Somersby": 300,
+    "Red Juice Per Glass": 120,
+    "Soda": 70,
+    "Lemon Soda": 90,
+    "Badam Soda": 150,
+    "Jumbo Cold Drinks 1.5Ltr.": 270,
+    "Lemon Sprite": 90,
+    "Hot Lemon with Honey": 130
+  },
+  {
+    "category": "Pizza",
+    "Veg Pizza": 350,
+    "Chicken Pizza": 400,
+    "Extra Cheese": 50
+  },
+  {
+    "category": "Tandoori",
+    "Tandoori Chicken": 600,
+    "Chicken Seekh Kabab": 550,
+    "Paneer Tikka": 400,
+    "Chicken Tikka": 430,
+    "Tandoori Roti": 30,
+    "Butter Roti": 40,
+    "Naan": 50,
+    "Butter Naan": 70,
+    "Garlic Naan": 90
+  },
+  {
+    "category": "Curry",
+    "Mix Vegetable": 270,
+    "Dal Fry": 250,
+    "Matar Paneer": 320,
+    "Paneer Butter Masala": 450,
+    "Local Chicken Curry": 370,
+    "Boiler Chicken Curry": 350,
+    "Fish Curry": 350,
+    "Mutton Curry": 400,
+    "Butter Chicken": 600
+  },
+  {
+    "category": "Others",
+    "Veg Thukpa": 200,
+    "Veg Chowmin": 130,
+    "Chicken Thukpa": 200,
+    "Chicken Chowmin": 130,
+    "Paneer Chilly": 375,
+    "Mushroom Chilly": 300,
+    "French Fry": 160,
+    "Papad": 25
+  },
+  {
+    "category": "Balchhi Special",
+    "Tawa Fish": 450,
+    "Local Chicken Poleko": 400,
+    "Fish Sukuti": 390,
+    "Mutton Sekuwa": 430,
+    "Mutton Bhutuwa": 270,
+    "Chicken Sekuwa": 320
   }
 ]
